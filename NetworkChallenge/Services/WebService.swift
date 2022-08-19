@@ -59,31 +59,5 @@ class WebService {
         }
         return []
     }
-    
-//    static func loginSession(email: String, password: String) async -> Session? {
-//         let url = URL(string: "\(Constants.BASE_URL)users/login")
-//         var urlRequest = URLRequest(url: url!)
-//
-//         let loginString = NSString(format: "%@:%@", email, password)
-//         let loginData: NSData = loginString.data(using: String.Encoding.utf8.rawValue)! as NSData
-//
-//         let base64LoginString = loginData.base64EncodedString(options: [])
-//
-//         urlRequest.httpMethod = "POST"
-//         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
-//         urlRequest.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
-//
-//         do {
-//             let (data, _) = try await URLSession.shared.data(for: urlRequest)
-//             let decodedLoginResponse: Session = try JSONDecoder().decode(Session.self, from: data)
-//             print(decodedLoginResponse)
-//             return decodedLoginResponse
-//         } catch {
-//             print("\(error)")
-//         }
-//
-//         return nil
-//     }
-    
 
 }
